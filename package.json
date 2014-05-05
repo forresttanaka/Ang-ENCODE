@@ -1,0 +1,21 @@
+{
+  "name": "octopi",
+  "version": "6.5.2",
+  "author": "Forrest Tanaka <forrest@forrest-tanaka.com>",
+  "homepage": "http://roots.io",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "jshintConfig": {
+    "strict": false
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-uglify": "~0.4.x",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-compass": "~0.7.2",
+    "grunt-contrib-concat": "~0.3.0"
+  }
+}

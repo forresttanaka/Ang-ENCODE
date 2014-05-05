@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" ng-app="encodeApp">
+<head>
+    <title>Angular</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body ng-controller="EncodeCtrl">
+
+    <div class="container">
+        <div class="row">
+            <ul class="encode-display">
+                <li class="col-xs-6 col-sm-4 col-md-3 col-lg-2" ng-repeat="item in data['@graph']">
+                    <p>{{item['antibody.accession']}}</p>
+                    <dl class="detail-panel">
+                        <dt>{{data.columns.status.title}}</dt>
+                        <dd>{{item.status.toLowerCase() | sentenceCase}}</dd>
+                        <dt>{{data.columns['antibody.source.title'].title}}</dt>
+                        <dd>{{item['antibody.source.title']}}</dd>
+                        <dt>{{data.columns['target.organism.name'].title}}</dt>
+                        <dd>{{item['target.organism.name'] | sentenceCase}}</dd>
+                        <dt>{{data.columns['antibody.product_id'].title}}</dt>
+                        <dd>{{item['antibody.product_id']}}</dd>
+                        <dt>{{data.columns['target.label'].title}}</dt>
+                        <dd>{{item['target.label']}}</dd>
+                        <dt>{{data.columns['antibody.lot_id'].title}}</dt>
+                        <dd>{{item['antibody.lot_id']}}</dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/lib/jquery-2.1.0.min.js"></script>
+    <script src="js/lib/angular/angular.js"></script>
+    <script src="js/lib/underscore-min.js"></script>
+    <script src="js/lib/underscore.string.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+
+</body>
+</html>
