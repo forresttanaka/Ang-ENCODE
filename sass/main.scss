@@ -16,10 +16,24 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
-    background-color: rgba(255,255,255,0.5);
-    color: #fff;
+
+    li {
+        padding: 2px;
+    }
 }
 
+
+.accession {
+    display: block;
+    padding: 10px 0;
+    background-color: rgba(255,255,255,0.3);
+    border: 1px solid rgba(255,255,255,0.5);
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    @include text-shadow(rgba(0,0,0,.8) 0 0 2px);
+    @include border-radius(3px);
+}
 
 .detail-panel {
     display: none;
